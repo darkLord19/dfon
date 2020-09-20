@@ -1,4 +1,4 @@
-package configparser
+package parser
 
 import (
 	"fmt"
