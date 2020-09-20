@@ -1,6 +1,7 @@
 package parser
 
 import (
+	"database/sql"
 	"encoding/json"
 	"os"
 )
@@ -19,6 +20,7 @@ type Database struct {
 	User       string   `json:"user,omitempty"`
 	Threshold  float32  `json:"threshold,omitempty"`
 	NotifyList []string `json:"notify_list"`
+	Connection *sql.DB
 }
 
 // New returns a new Database object
