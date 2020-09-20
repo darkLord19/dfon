@@ -3,7 +3,12 @@
         {
             "host": "localhost",
             "port": 100,
-            "threshold": 92.5
+            "threshold": 92.5,
+            "notify_list": [
+                "umang@xyz.com",
+                "abc@xyz.com",
+                "xyz@abc.com"
+            ]
         }
     ]
 }
