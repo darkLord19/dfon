@@ -1,0 +1,9 @@
+{
+    "databases": [
+        {
+            "host": "localhost",
+            "port": 100,
+            "threshold": 92.5
+        }
+    ]
+}
