@@ -18,6 +18,7 @@ type Database struct {
 	Port       uint16   `json:"port,omitempty"`
 	Type       string   `json:"type,omitempty"`
 	User       string   `json:"user,omitempty"`
+	Password   string   `json:"password,omitempty"`
 	Threshold  float32  `json:"threshold,omitempty"`
 	NotifyList []string `json:"notify_list"`
 	Connection *sql.DB
