@@ -11,12 +11,13 @@ type Config struct {
 
 // Database represents a single config object created from config file
 type Database struct {
-	Name      string  `json:"name"`
-	Host      string  `json:"host,omitempty"`
-	Port      uint16  `json:"port,omitempty"`
-	Type      string  `json:"type,omitempty"`
-	User      string  `json:"user,omitempty"`
-	Threshold float32 `json:"threshold,omitempty"`
+	Name       string   `json:"name"`
+	Host       string   `json:"host,omitempty"`
+	Port       uint16   `json:"port,omitempty"`
+	Type       string   `json:"type,omitempty"`
+	User       string   `json:"user,omitempty"`
+	Threshold  float32  `json:"threshold,omitempty"`
+	NotifyList []string `json:"notify_list"`
 }
 
 // New returns a new Database object
