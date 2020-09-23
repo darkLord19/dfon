@@ -24,17 +24,6 @@ type Database struct {
 	Connection *sql.DB
 }
 
-// New returns a new Database object
-// in: json formatted string
-func New(conf string) *Database {
-	var dbc Database
-	err := json.Unmarshal([]byte(conf), &dbc)
-	if err != nil {
-		return nil
-	}
-	return &dbc
-}
-
 // LoadConfig returns DBConfig object for all the databases which
 // user wants to monitor
 func LoadConfig(fname string) (Config, error) {
