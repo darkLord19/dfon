@@ -8,7 +8,7 @@ import (
 
 // Config is config
 type Config struct {
-	DBList []Database `json:"databases"`
+	DBList []Database `json:"databases,omitempty"`
 }
 
 // Database represents a single config object created from config file
