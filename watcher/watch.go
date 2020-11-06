@@ -4,11 +4,12 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/darkLord19/dfon/db"
 	"github.com/darkLord19/dfon/parser"
 )
 
 func startWatcher(dbase *parser.Database) {
-	ticker := time.NewTicker(5 * time.Minute)
+	ticker := time.NewTicker(5 * time.Second)
 	done := make(chan bool)
 	go func() {
 		for {
@@ -16,7 +17,11 @@ func startWatcher(dbase *parser.Database) {
 			case <-done:
 				return
 			case <-ticker.C:
-				fmt.Println("Hello world")
+				cols, err := db.GetColumsAboveThreshold(dbase)
+				if err != nil {
+					panic("something bad happened")
+				}
+				fmt.Println(cols)
 			}
 		}
 	}()

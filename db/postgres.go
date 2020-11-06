@@ -15,3 +15,7 @@ func connectPostgres(db *parser.Database) error {
 	db.Connection = dbC
 	return nil
 }
+
+func getAuroIncrFiledsPsql(dbase *parser.Database) {
+
+}
